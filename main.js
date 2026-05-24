@@ -39,3 +39,43 @@ goUpEl.onclick = _ => {
     scrollBy(0, -200)
 }
  */
+
+
+
+// slide show for main section
+const nextBtn = document.querySelector("main .next")
+const prevBtn = document.querySelector("main .prev")
+const imgAll = document.querySelectorAll('main img')
+let indexImg = 0
+nextBtn.onclick = _ => {
+    removeClassShow()
+    if (indexImg == imgAll.length - 1) {
+        indexImg = 0
+    } else {
+        indexImg++
+    }
+    imgAll[indexImg].classList.add("show")
+}
+prevBtn.onclick = _ => {
+    removeClassShow()
+    if (indexImg == 0) {
+        indexImg = imgAll.length - 1
+    } else {
+        indexImg--
+    }
+    imgAll[indexImg].classList.add("show")
+}
+
+function removeClassShow() {
+    imgAll.forEach(img => img.classList.remove("show"))
+}
+
+window.setInterval(_ => {
+    removeClassShow()
+    if (indexImg == imgAll.length - 1) {
+        indexImg = 0
+    } else {
+        indexImg++
+    }
+    imgAll[indexImg].classList.add("show")
+}, 3000)
