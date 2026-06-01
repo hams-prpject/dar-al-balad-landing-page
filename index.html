@@ -25,40 +25,40 @@
             <nav>
                 <div class="navlink">
                     <div class="dropdown">
-                        <button class="dropBtn">من نحن
+                        <a class="dropBtn" href="#about">من نحن
                             <i class="fa-solid fa-chevron-down"></i>
-                        </button>
+                        </a>
                         <div class="dropdownItems">
-                            <a href="#" class="active">نبذة عن دار البلد لحلول الاعمال</a>
-                            <a href="#">مجلس الإدارة</a>
-                            <a href="#">المساهمات الاجتماعية </a>
-                            <a href="#"> شركات تابعة </a>
+                            <a href="">نبذة عن دار البلد لحلول الاعمال</a>
+                            <a href="">مجلس الإدارة</a>
+                            <a href="">المساهمات الاجتماعية </a>
+                            <a href=""> شركات تابعة </a>
                         </div>
                     </div>
-                    <a href="#">الحلول</a>
-                    <a href="#">شركاء النجاح</a>
+                    <a href="#solve">الحلول</a>
+                    <a href="#partners">شركاء النجاح</a>
                     <div class="dropdown">
                         <button class="dropBtn">علاقات لمستثمرين
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <div class="dropdownItems">
                             <a href="#" class="active">نشرة معلومات السهم</a>
-                            <a href="#">حوكمة الشركة</a>
-                            <a href="#">المعلومات المالية</a>
-                            <a href="#">توزيعات الأرباح</a>
-                            <a href="#">اجتماعات الجمعية العامة </a>
-                            <a href="#">إعلانات الشركة</a>
-                            <a href="#">التقارير</a>
-                            <a href="#">التواصل مع علاقات المستثمرين</a>
+                            <a href="">حوكمة الشركة</a>
+                            <a href="">المعلومات المالية</a>
+                            <a href="">توزيعات الأرباح</a>
+                            <a href="">اجتماعات الجمعية العامة </a>
+                            <a href="">إعلانات الشركة</a>
+                            <a href="">التقارير</a>
+                            <a href="">التواصل مع علاقات المستثمرين</a>
                         </div>
                     </div>
-                    <a href="#">التوظيف</a>
+                    <a href="">التوظيف</a>
                 </div>
                 <div class="navAction">
-                    <a href="#">
+                    <a href="#contact">
                         <i class="fa-regular fa-headphones"></i>
                     </a>
-                    <a href="#">EN</a>
+                    <a href="./en.html">EN</a>
                 </div>
                 <button class="menuBtn">
                     <i class="fa-solid fa-bars-staggered fa-beat-fade"></i>
@@ -103,7 +103,7 @@
     <!-- end main section -->
 
     <!-- start about section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
             <div class="content">
                 <h2>نبذة عن دار البلد لحلول الأعمال</h2>
@@ -137,7 +137,7 @@
     <!-- end about section -->
 
     <!-- start solve section -->
-    <section class="solve">
+    <section id="solve" class="solve">
         <div class="head">
             <h3 class="head-title3">الحلول</h3>
             <h2 class="head-title2">توفر دار البلد لحلول الأعمال مجموعة متكاملة من خدمات تكنولوجيا المعلومات، مستفيدة من
@@ -193,7 +193,7 @@
     <!-- end solve section -->
 
     <!-- start partners section -->
-    <section class="partners">
+    <section id="partners" class="partners">
         <div class="container">
             <div class="head">
                 <h3 class="head-title3">شركائنا</h3>
@@ -302,7 +302,7 @@
     <!-- end partners section -->
 
     <!-- start Contact us section -->
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="container">
             <div class="head">
                 <h3 class="head-title3">تواصل معنا</h3>
@@ -312,33 +312,33 @@
             </div>
             <form action="#" novalidate>
                 <div class="col">
-                    <label for="fname">الاسم بالكامل <span class="require">*</span>
+                    <label for="fname">الاسم بالكامل
+                        <span class="require">*</span>
                     </label>
                     <input required id="fname" type="text" name="fullname" placeholder="الاسم بالكامل">
-                    <small class="error-msg" id="fnameError"></small>
+                    <div class="error-msg" id="fnameError"></div>
                 </div>
                 <div class="col">
                     <label for="subject">الموضوع<span class="require">*</span>
                     </label>
                     <input required id="subject" type="text" name="subject" placeholder="الموضوع">
-                    <small class="error-msg" id="subjectError"></small>
+                    <div class="error-msg" id="subjectError"></div>
 
                 </div>
                 <div class="col">
                     <label for="tel">رقم الهاتف<span class="require">*</span>
                     </label>
-                    <input required id="tel" type="tel" name="phone" pattern="\(\d{3}\)\s\d{3}-\d{4}"
-                        placeholder="(555) 000-0000" title="يجب أن يكون التنسيق: (555) 000-0000">
-                    <small class="error-msg" id="telError"></small>
+                    <input required id="tel" type="tel" name="phone" placeholder="(555) 000-0000"
+                        title="يجب أن يكون التنسيق: (555) 000-0000">
+                    <div class="error-msg" id="telError"></div>
 
                 </div>
                 <div class="col">
                     <label for="mail">البريد الالكتروني<span class="require">*</span>
                     </label>
                     <input required id="mail" type="email" name="mail" placeholder="البريد الالكتروني"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         title="يرجى إدخال بريد إلكتروني صحيح (مثال: example@mail.com)">
-                    <small class="error-msg" id="mailError"></small>
+                    <div class="error-msg" id="mailError"></div>
 
                 </div>
                 <div class="col col-full">
@@ -352,7 +352,7 @@
                         اوافق علي
                         <a href="#"> سياسة الاستخدام </a>
                     </label>
-                    <small class="error-msg" id="agreeError"></small>
+                    <div class="error-msg" id="agreeError"></div>
 
                 </div>
                 <button class="submitBtn">ارسل الآن</button>

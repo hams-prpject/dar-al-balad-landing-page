@@ -20,29 +20,9 @@ onscroll = _ => {
     } else {
         goUpEl.classList.remove('show');
         headerEl.classList.remove("scroll");
-
     }
-
-
 }
-
-// ------ scroll whene press btn -----
-/*
-goUpEl.onclick = _ => {
-    window.scrollTo(0, 0);
-    window.scrollTo(
-        {
-            top: 200,
-            behavior: "smooth"
-        }
-    );
-    scrollBy(0, -200)
-}
- */
-
-
-
-// slide show for main section
+// ------------  slide show for main section
 const nextBtn = document.querySelector("main .next")
 const prevBtn = document.querySelector("main .prev")
 const imgAll = document.querySelectorAll('main img')
@@ -69,7 +49,6 @@ prevBtn.onclick = _ => {
 function removeClassShow() {
     imgAll.forEach(img => img.classList.remove("show"))
 }
-
 window.setInterval(_ => {
     removeClassShow()
     if (indexImg == imgAll.length - 1) {
@@ -79,3 +58,32 @@ window.setInterval(_ => {
     }
     imgAll[indexImg].classList.add("show")
 }, 3000)
+
+
+// concat for validition 
+const submitBtn = document.querySelector(".submitBtn");
+submitBtn.addEventListener("click", event => {
+    event.preventDefault();
+
+    const fnameInp = document.querySelector("#fname");
+    const fnameMsg = document.querySelector("#fnameError");
+    const fanme = fnameInp.value.trim()
+    if (!fanme) {
+        fnameError.textContent = "يرجى ملى الحقل";
+        fnameError.classList.add('show')
+    } else if (fanme.length < 2) {
+        fnameError.textContent = "كتابة اسم صحيح اكر من حرف ";
+        fnameError.classList.add('show')
+    } else {
+        fnameError.textContent = "";
+        fnameError.classList.remove('show')
+    }
+
+})
+
+
+
+
+
+
+
